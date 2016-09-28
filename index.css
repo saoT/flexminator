@@ -1,0 +1,98 @@
+/***** FLEXMINATOR ******/
+/*************************
+  How to make a grid using flexbox.
+  How to place a background-image perfectly.
+  How to use the alpha in rgba.
+  And how to use @media.
+  How to keep your css semantic.
+*************************/
+/***** FLEXMINATOR ******/
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+header {
+  height: 400px;
+  background-image: url('https://hd.unsplash.com/photo-1459445364195-16475050193c');
+}
+
+header .logo {
+  color: rgb(73, 23, 23);
+  font-size: 30px;
+  padding-left: 50px;
+}
+
+section {
+  max-width: 1000px;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  background-color: rgba(73, 23, 23, 0.1);
+  height: 200px;
+  padding: 40px;
+}
+
+/***** BOX MODULE *****/
+
+.box {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+}
+
+.box .strip {
+  height: 20%;
+  flex: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid white;
+}
+
+/****** GRID ******/
+
+.grid, .strip {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.grid .column {
+  flex: 100%;
+  text-align: center;
+  padding: 20px 20px 0 20px;
+}
+
+.grid .three.column {
+  flex: 33%;
+}
+
+.grid .four.column {
+  flex: 25%;
+}
+
+.align-top {
+  align-self: flex-start;
+}
+
+.align-bottom {
+  align-self: flex-end;
+}
+
+.align-center {
+  align-self: center;
+}
+
+/****** MEDIAS ******/
+
+@media screen and (max-width: 600px) {
+  .grid .three.column, .grid .four.column {
+    flex: 100%;
+  }
+}
